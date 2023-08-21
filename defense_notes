@@ -1,0 +1,83 @@
+powershell empire get requests
+/login/process.php
+/admin/get.php
+/news/php  
+  
+signatures
+useragent string:
+Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko 
+serve value:
+Microsoft-IIS/7.5
+server banner:
+<body>It Works!</h1>
+
+JA3 - pre-baked into a lot of security applications like SecurityOnion
+JA3 is a method to fingerprint SSL/TLS client connection based on fields in the Client Hello message from the SSL/TLS handshake. 
+The following fields within the Client Hello message are used: SSL/TLS Version, Accepted Ciphers, List of Extensions, Elliptic Curves, and Elliptic Curve Formats. 
+The result being a MD5 hash serving as the purpose for the fingerprint. Because the SSL/TLS handshake is sent in clear text we can use it to fingerprint any client application using the information within the Client Hello message.
+New version: JEE
+
+Windows Event Log
+  To enable script block logging:
+1. 	In the “Windows PowerShell” GPO settings, set “Turn on PowerShell Script Block Logging” to enabled.
+Alternately, setting the following registry value will enable logging:
+»  	HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging → EnableScriptBlockLogging = 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
