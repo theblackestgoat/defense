@@ -1,3 +1,22 @@
+jump box
+10.50.24.84
+winsys4lanblu
+defender 
+1qaz2wsx!QAZ@WSX
+
+endgame
+172.64.0.123
+blueuser64
+1qaz2wsx!QAZ@WSX
+
+https://wazuh.com/
+
+https://securityonionsolutions.com/
+172.64.0.100
+defender@505cav.bde
+1qaz2wsx!QAZ@WSX
+
+
 powershell empire get requests
 /login/process.php
 /admin/get.php
@@ -23,6 +42,52 @@ Windows Event Log
 Alternately, setting the following registry value will enable logging:
 »  	HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging → EnableScriptBlockLogging = 1
 
+purpose of deliberate defenseive cyberspace ops
+defend dod
+halt adversary offense
+a. Purpose of DCO. The purpose of DCO is to halt adversary offensive initiative, sustain
+or regain friendly initiative, and, if required, create conditions for a counteroffensive. It is not
+solely defined by the specific effect created or the capabilities employed.
+
+under the layers of cyber, given a country : physical layer
+
+dco phase involves - little engagement, includes intel : screen
+
+cpt operations process - step provde net diagram or range info : step 2 terrain identification
+
+defensive prep of env - shape terrain or create situational awareness : adverse terrain
+
+disrupt symbol : Integrates direct and indirect fires, terrain, and
+obstacles to upset an enemy’s formation or
+tempo, interrupt the enemy’s timetable, or cause
+enemy forces to commit prematurely or attack in a
+piecemeal fashion.
+
+objective used by commander purpose slow or halt attack : c. Gain Time. Commanders may employ defensive measures to gain time. Such measures
+succeed by slowing or halting an attack while allowing friendly forces time to reinforce the
+defense. 
+
+# of personnel cpt consist of : 39
+
+HMM human maturity model process involves levels - new data analysis : level 3 innovative
+
+tool build individual plays self-contained detect intrusions : security onion playbook
+
+apt-29 - boommic performs defferent methods - 4 methods to persistance : beacon, windows run key, tasks, certs
+
+q44 battlespace awareness and analysis 10.13.38.11 : a. DMZ-Other Network
+
+
+scenario notes
+Defensive Cyberspace Operations (DCO) ISO JTF-387 for the FOB Acorn ENT_LAN critical mission network IOT
+APT29 - https://attack.mitre.org/groups/G0016/
+Cozy Bear - https://www.crowdstrike.com/blog/observations-from-the-stellarparticle-campaign/ ssh to public facing server1, rdp with service account to internal server1, rdo with domain admin to internal server2, login to O365 portal with privelege cloud account
+The Dukes
+Carbanak
+UNC2452
+NOBELIUM
+StellarParticle
+Dark Halo
 
 
 
@@ -56,12 +121,7 @@ Alternately, setting the following registry value will enable logging:
 
 
 
-
-
-
-
-
-
+public statements included citations to APT29, Cozy Bear, and The Dukes
 
 
 
