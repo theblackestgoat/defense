@@ -81,15 +81,83 @@ q44 battlespace awareness and analysis 10.13.38.11 : a. DMZ-Other Network
 scenario notes
 Defensive Cyberspace Operations (DCO) ISO JTF-387 for the FOB Acorn ENT_LAN critical mission network IOT
 APT29 - https://attack.mitre.org/groups/G0016/
-Cozy Bear - https://www.crowdstrike.com/blog/observations-from-the-stellarparticle-campaign/ ssh to public facing server1, rdp with service account to internal server1, rdo with domain admin to internal server2, login to O365 portal with privelege cloud account
+Cozy Bear - https://www.crowdstrike.com/Responder sent a SYN ACK followed by a FIN, we never saw a SYN from the originatorblog/observations-from-the-stellarparticle-campaign/ ssh to public facing server1, rdp with service account to internal server1, rdo with domain admin to internal server2, login to O365 portal with privelege cloud account
 The Dukes
-Carbanak
-UNC2452
+Carbanak - application layer protocol, web protocol, boot or logon autostart, registry run keys/startup folder, create local account, email collection, 
+UNC2452 - campaign, SolarWinds.Orion.Core.BusinessLayer.dll communicates via HTTP to third party servers, loaded into SolarWinds.BusinessLayerHost.exe or SolarWinds.BusinessLayerHostx64.exe, attempt to resolve a subdomain of avsvmcloud[.]com. The DNS response will return a CNAME record that points to a Command and Control (C2) domai,  
 NOBELIUM
 StellarParticle
 Dark Halo
 
 
+192.168.99.20:53 --> SYN ACK FIN, no SYN from originator --> 10.50.255.254:45097
+
+
+
+
+2023-08-23 11:08:53.732 -07:00 
+"T1043"
+Did not receive identification string from 192.168.99.20 port 58458\",
+\"predecoder\":{\"program_name\":\"sshd\",\"timestamp\":\"Aug 23 18:08:44\",
+\"hostname\":\"so505cav\"},
+\"decoder\":{\"parent\":\"sshd\",\"name\":\"sshd\"},
+\"data\":{\"srcip\":\"192.168.99.20\",
+\"srcport\":\"58458\"},
+\"location\":\"/var/log/secure\"}"
+
+2023-08-23 11:09:47.738 -07:00
+Unable to negotiate with 192.168.99.20 port 50958: no matching MAC found. Their offer: hmac-md5,hmac-sha1,hmac-ripemd160 [preauth]\",
+\"predecoder\":{\"program_name\":\"sshd\",
+\"timestamp\":\"Aug 23 18:09:42\",
+\"hostname\":\"so505cav\"},
+\"decoder\":{\"name\":\"sshd\"},
+\"location\":\"/var/log/secure\"}"
+"Aug 23 18:09:42 so505cav sshd[19431]: Unable to negotiate with 192.168.99.20 port 50958: no matching MAC found. Their offer: hmac-md5,hmac-sha1,hmac-ripemd160 [preauth]"
+
+2023-08-23 11:34:13.203 -07:00
+"connection.state_description": [
+      "Connection attempt seen, no reply"
+"source.ip": [
+      "10.13.38.11"
+"source.port.keyword": [
+      "34770"
+"destination.ip.keyword": [
+      "192.168.1.254"
+"destination.port": [
+      1723
+
+Timestamp                        Rule                                                         Level    Source            Destination
+2023-08-23 11:34:13.203 -07:00	ET SCAN Rapid POP3S Connections - Possible Brute Force Attack	low	    10.13.38.11	34770	192.168.1.13	995
+2023-08-23 11:08:53.732 -07:00	sshd: insecure connection attempt (scan).	                    low	    192.168.99.20		
+2023-08-23 11:34:13.194 -07:00	ET SCAN Rapid POP3 Connections - Possible Brute Force Attack	low	    10.13.38.11	34770	192.168.1.5	110
+2023-08-23 11:34:13.204 -07:00	ET SCAN Rapid IMAPS Connections - Possible Brute Force Attack	low	    10.13.38.11	34770	192.168.1.16	993
+2023-08-23 11:34:13.205 -07:00	ET SCAN Rapid IMAP Connections - Possible Brute Force Attack	low	    10.13.38.11	34770	192.168.1.12	143	
+2023-08-23 10:49:46.420 -07:00	ET DNS Query for .cc TLD	                                    medium	192.168.99.25	61205	192.168.1.250	53
+2023-08-23 11:34:13.191 -07:00	ET SCAN Potential VNC Scan 5900-5920	                        medium	10.13.38.11	34770	192.168.1.8	5900
+2023-08-23 11:08:37.946 -07:00	ET SCAN Potential VNC Scan 5900-5920	                        medium	192.168.99.20	33852	172.64.0.11	5900
+2023-08-23 11:34:13.527 -07:00	ET SCAN Potential VNC Scan 5800-5820	                        medium	10.13.38.11	34770	192.168.1.4	5811
+2023-08-23 11:08:38.026 -07:00	ET SCAN Potential VNC Scan 5800-5820	                        medium	192.168.99.20	50368	172.64.0.11	5800
+2023-08-23 11:34:13.190 -07:00	ET SCAN Potential SSH Scan	                                  medium	10.13.38.11	34770	192.168.1.9	22
+2023-08-23 11:08:37.946 -07:00	ET SCAN Potential SSH Scan	                                  medium	192.168.99.20	32924	172.64.0.13	22
+2023-08-23 11:34:13.192 -07:00	ET SCAN Behavioral Unusually fast Terminal Server Traffic Potential Scan or Infection (Outbound)	low	10.13.38.11	34770	192.168.1.10	3389
+2023-08-23 11:09:01.157 -07:00	ET SCAN Behavioral Unusually fast Terminal Server Traffic Potential Scan or Infection (Outbound)	low	192.168.99.20	55182	172.64.0.200	3389
+2023-08-23 11:34:13.192 -07:00	ET SCAN Behavioral Unusually fast Terminal Server Traffic Potential Scan or Infection (Inbound)	low	10.13.38.11	34770	192.168.1.10	3389
+2023-08-23 11:09:01.157 -07:00	ET SCAN Behavioral Unusually fast Terminal Server Traffic Potential Scan or Infection (Inbound)	low	192.168.99.20	55182	172.64.0.200	3389
+2023-08-23 11:34:20.326 -07:00	ET SCAN Behavioral Unusual Port 445 traffic Potential Scan or Infection	low	10.13.38.11	53420	192.168.1.6	445
+2023-08-23 11:08:50.156 -07:00	ET SCAN Behavioral Unusual Port 445 traffic Potential Scan or Infection	low	192.168.99.20	60912	172.64.0.11	445
+2023-08-23 11:10:06.281 -07:00	ET INFO TLS Handshake Failure	medium	172.64.0.123	443	192.168.99.20	49356
+2023-08-23 11:10:06.128 -07:00	ET INFO TLS Handshake Failure	medium	172.64.0.123	443	192.168.99.20	49338	
+2023-08-23 11:10:06.128 -07:00	ET INFO TLS Handshake Failure	medium	172.64.0.123	443	192.168.99.20	49324
+2023-08-23 11:08:56.153 -07:00	ET INFO TLS Handshake Failure	medium	172.64.0.184	443	192.168.99.20	55872
+2023-08-23 11:08:50.178 -07:00	ET INFO TLS Handshake Failure	medium	172.64.0.123	443	192.168.99.20	60228
+2023-08-23 11:08:50.162 -07:00	ET INFO TLS Handshake Failure	medium	172.64.0.100	443	192.168.99.20	49500	
+2023-08-23 11:12:54.412 -07:00	ET POLICY GIOP/IIOP Request Outbound	high	192.168.99.20	34612	172.64.0.12	445
+2023-08-23 11:12:40.320 -07:00	ET POLICY GIOP/IIOP Request Outbound	high	192.168.99.20	53960	172.64.0.10	445
+2023-08-23 11:12:34.307 -07:00	ET POLICY GIOP/IIOP Request Outbound	high	192.168.99.20	53992	172.64.0.13	445
+2023-08-23 11:08:50.173 -07:00	ET POLICY GIOP/IIOP Request Outbound	high	192.168.99.20	32832	172.64.0.11	445
+2023-08-23 11:08:50.172 -07:00	ET POLICY GIOP/IIOP Request Outbound	high	192.168.99.20	34612	172.64.0.12	445
+2023-08-23 11:08:50.171 -07:00	ET POLICY GIOP/IIOP Request Outbound	high	192.168.99.20	53992	172.64.0.13	445
+2023-08-23 11:08:50.171 -07:00	ET POLICY GIOP/IIOP Request Outbound	high	192.168.99.20	53992	172.64.0.13	445
 
 
 
@@ -102,42 +170,3 @@ Dark Halo
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-public statements included citations to APT29, Cozy Bear, and The Dukes
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
